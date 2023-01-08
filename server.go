@@ -34,18 +34,6 @@ type AckOperation struct {
 	Payload 		interface{} `json:"payload"`
 }
 
-type Payload struct {
-	Id string 		`json:"id"`
-	NewShape string	`json:"newShape"`
-	NewColor string `json:"newColor"`
-	NewSize string  `json:"newSize"`
-	
-	Shape 	string  `json:"shape"`
-	Color 	string  `json:"color"`
-	Size 	string  `json:"size"`
-	Counter uint64	`json:"counter"`
-}
-
 var WsMessageType = 1
 
 func NewEngineServer(handler *OperationManager, config *EngineConfig, hub *Hub) *EngineServer {
